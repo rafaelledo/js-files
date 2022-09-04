@@ -1,6 +1,6 @@
 function generateNumbersBetween(min, max) {
-  if (min > max) {
-    console.error("Min number > Max")
+  if (min >= max) {
+    throw new Error("Min number >= Max")
   }
 
   return new Promise(resolve => {
@@ -10,5 +10,5 @@ function generateNumbersBetween(min, max) {
   })
 }
 
-generateNumbersBetween(1,60)
+generateNumbersBetween(1, 60)
 .then(console.log)
